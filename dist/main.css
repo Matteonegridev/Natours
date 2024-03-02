@@ -93,6 +93,45 @@ a {
   text-shadow: 0.5rem 1rem 2rem rgba(53, 53, 53, 0.3);
 }
 
+.row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3.125rem;
+  padding: 0 5rem;
+}
+
+.heading--tertiary {
+  font-size: 1.1875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.paragraph {
+  font-size: 1rem;
+}
+.paragraph:not(:last-child) {
+  margin-block-end: 1.875rem;
+}
+
+.learn-more:link, .learn-more:visited {
+  display: inline-block;
+  color: rgb(40, 180, 133);
+  font-size: 1.125rem;
+  border-bottom: 1px solid rgb(40, 180, 133);
+  transition: all 250ms ease-in-out;
+  transform: translateY(-2px);
+}
+.learn-more:hover {
+  background-color: rgb(40, 180, 133);
+  color: rgb(255, 255, 255);
+  transform: translateY(-2px);
+  box-shadow: 0 1rem 2rem rgba(53, 53, 53, 0.2);
+}
+.learn-more:active {
+  transform: translateY(0);
+  box-shadow: 0 0.5rem 1rem rgba(53, 53, 53, 0.2);
+}
+
 .btn {
   /* per centrarlo abbiamo dato al container il text align center*/
   display: inline-block;
@@ -194,4 +233,12 @@ a {
 }
 .u-center-text {
   text-align: center;
+}
+
+.u-margin-bottom-70 {
+  margin-block-end: 4.375rem;
+}
+
+.u-margin-bottom-17 {
+  margin-block-end: 1.0625rem;
 }/*# sourceMappingURL=main.css.map */

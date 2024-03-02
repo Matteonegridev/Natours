@@ -1,3 +1,11 @@
+@use "../utilities/functions" as f;
+
 .u-center-text {
   text-align: center;
+}
+.u-margin-bottom-70 {
+  margin-block-end: f.rem(70);
+}
+.u-margin-bottom-17 {
+  margin-block-end: f.rem(17);
 }
