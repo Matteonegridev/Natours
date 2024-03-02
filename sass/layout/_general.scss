@@ -1,0 +1,31 @@
+@use "../utilities/functions" as f;
+
+$alpha: 0.8;
+$light-color: rgb(126, 213, 111);
+$med-color: rgb(85, 197, 122);
+$dark-color: rgb(40, 180, 133);
+$text-color: rgb(119, 119, 119);
+$white: rgb(255, 255, 255);
+$black: rgb(53, 53, 53);
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  font-size: f.rem(16);
+  padding: f.rem(29);
+  color: $text-color;
+  text-rendering: optimizeSpeed;
+}
+a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
