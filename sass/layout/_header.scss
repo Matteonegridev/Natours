@@ -11,9 +11,9 @@ $black: rgb(53, 53, 53);
 .header {
   height: 95vh;
   background: linear-gradient(
-      to right bottom,
+      55deg,
       rgba($dark-color, $alpha),
-      rgba($light-color, $alpha)
+      rgba($med-color, $alpha)
     ),
     url(../assets/img/hero.jpg) top;
   background-size: cover;

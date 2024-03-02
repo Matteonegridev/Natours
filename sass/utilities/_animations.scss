@@ -1,4 +1,4 @@
-/* animazione testo header*/
+//! Header Text Animation
 @keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -21,6 +21,7 @@
     transform: translateX(0);
   }
 }
+//! Button Animation
 @keyframes moveInBottom {
   0% {
     opacity: 0;
