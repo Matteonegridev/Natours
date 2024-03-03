@@ -1,0 +1,144 @@
+@use "../utilities/functions" as f;
+
+$alpha: 0.8;
+$light-color: rgb(126, 213, 111);
+$med-color: rgb(85, 197, 122);
+$dark-color: rgb(40, 180, 133);
+$text-color: rgb(119, 119, 119);
+$white: rgb(255, 255, 255);
+$black: rgb(53, 53, 53);
+$gb-color-gray: rgb(247, 247, 247);
+$secondary-light: rgb(255, 185, 0);
+$secondary-dark: rgb(255, 119, 56);
+$tertiary-light: rgb(41, 152, 255);
+$tertiary-dark: rgb(86, 67, 250);
+
+.tour-section {
+  padding: f.rem(250) f.rem(50);
+  background: $gb-color-gray;
+  margin-block-start: f.rem(-180);
+}
+.card {
+  perspective: f.rem(1150);
+  -moz-perspective: f.rem(1150);
+  position: relative;
+  //! give them both the same height
+  height: f.rem(500);
+
+  &__title-front {
+    font-size: f.rem(28);
+    color: $white;
+    position: absolute;
+    right: f.rem(25);
+    top: f.rem(110);
+    text-transform: uppercase;
+    text-align: right;
+    width: 65%;
+  }
+  // heading
+  &__heading-span {
+    padding: f.rem(7) f.rem(15);
+    -webkit-box-decoration-break: clone;
+    //! makes the background larger on
+    //! sides of the text
+    box-decoration-break: clone;
+
+    &--1 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($dark-color, $alpha),
+        rgba($light-color, $alpha)
+      );
+    }
+    &--2 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($secondary-dark, $alpha),
+        rgba($secondary-light, $alpha)
+      );
+    }
+    &--3 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($tertiary-dark, $alpha),
+        rgba($tertiary-light, $alpha)
+      );
+    }
+  }
+  // immagine card con shape e diamo al parent (__side)
+  // l'overflow hidden dopo aver creato la blend mode
+  &__picture {
+    background-size: cover;
+    height: f.rem(230);
+    background-blend-mode: screen;
+    //! shape the image
+    clip-path: polygon(0 0, 100% 0%, 100% 79%, 0 94%);
+
+    &--1 {
+      background-image: url(/assets/img/nat-5.jpg),
+        linear-gradient(to right, $dark-color, $light-color);
+    }
+    &--2 {
+      background-image: url(/assets/img/nat-6.jpg),
+        linear-gradient(to right, $secondary-dark, $secondary-light);
+    }
+    &--3 {
+      background-image: url(/assets/img/nat-7.jpg),
+        linear-gradient(to right, $tertiary-dark, $tertiary-light);
+    }
+  }
+
+  &__side {
+    border-radius: 10px;
+    text-align: center;
+    height: 100%;
+    transition: all 0.8s ease;
+    //! position absolute so the card stack on each other
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    //! prevent the image to have angles and so to overflow
+    overflow: hidden;
+    //! mostra la parte front, nasconde la retro
+    backface-visibility: hidden;
+    box-shadow: 0 1.5rem 4rem rgba($black, 0.2);
+
+    &--front {
+      background: $white;
+    }
+
+    &--retro {
+      transform: rotateY(180deg);
+
+      &-1 {
+        background: linear-gradient(-45deg, $dark-color, $light-color);
+      }
+      &-2 {
+        background: linear-gradient(-45deg, $secondary-dark, $secondary-light);
+      }
+      &-3 {
+        background: linear-gradient(-45deg, $tertiary-dark, $tertiary-light);
+      }
+    }
+  }
+
+  &:hover &__side--front {
+    transform: rotateY(-180deg);
+  }
+  &:hover &__side--retro {
+    transform: rotateY(0);
+  }
+
+  &__list {
+    width: 80%;
+    margin: 0 auto;
+    &--item {
+      padding: f.rem(12) f.rem(30);
+      border-bottom: 1px solid #f0f0f0;
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+}
