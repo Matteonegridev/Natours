@@ -132,6 +132,54 @@ a {
   box-shadow: 0 0.5rem 1rem rgba(53, 53, 53, 0.2);
 }
 
+.section-features {
+  padding: 9.375rem 0;
+  margin-top: -11.875rem;
+  background: linear-gradient(55deg, rgba(40, 180, 133, 0.8), rgba(85, 197, 122, 0.8)), url(../assets/img/nat-4.jpg);
+  background-position: top;
+  background-size: cover;
+  position: relative;
+  transform: skewY(-7deg);
+}
+.section-features > * {
+  transform: skewY(7deg);
+}
+
+.feature-box {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 1.5625rem;
+  height: 25rem;
+  text-align: center;
+  display: grid;
+  grid-template-rows: 1fr 50px 1fr;
+  border-radius: 10px;
+  box-shadow: 0 1.5rem 4rem rgba(53, 53, 53, 0.4);
+  transition: all 150ms ease-in;
+}
+.feature-box__icon {
+  font-size: 4.375rem;
+  grid-row: 1/2;
+  -webkit-background-clip: text;
+  display: inline-block;
+  color: transparent;
+  background-image: linear-gradient(to right, rgb(126, 213, 111), rgb(40, 180, 133));
+}
+.feature-box__title {
+  grid-row: 2;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+}
+.feature-box__paragraph {
+  font-size: 1rem;
+  grid-row: 3/4;
+  padding: 0.3125rem;
+  overflow: scroll;
+}
+.feature-box:hover {
+  transform: translateY(-25px) scale(1.03);
+  box-shadow: 0 2rem 4rem rgba(53, 53, 53, 0.6);
+}
+
 .btn {
   /* per centrarlo abbiamo dato al container il text align center*/
   display: inline-block;

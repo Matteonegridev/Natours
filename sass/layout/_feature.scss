@@ -1,0 +1,67 @@
+@use "../utilities/functions" as f;
+
+$alpha: 0.8;
+$light-color: rgb(126, 213, 111);
+$med-color: rgb(85, 197, 122);
+$dark-color: rgb(40, 180, 133);
+$text-color: rgb(119, 119, 119);
+$white: rgb(255, 255, 255);
+$black: rgb(53, 53, 53);
+
+.section-features {
+  padding: f.rem(150) 0;
+  margin-top: f.rem(-190);
+  background: linear-gradient(
+      55deg,
+      rgba($dark-color, $alpha),
+      rgba($med-color, $alpha)
+    ),
+    url(../assets/img/nat-4.jpg);
+  background-position: top;
+  background-size: cover;
+
+  position: relative;
+
+  transform: skewY(-7deg);
+
+  & > * {
+    transform: skewY(7deg);
+  }
+}
+.feature-box {
+  background-color: rgba($white, $alpha);
+  padding: f.rem(25);
+  height: f.rem(400);
+  text-align: center;
+  display: grid;
+  grid-template-rows: 1fr 50px 1fr;
+  border-radius: 10px;
+  box-shadow: 0 1.5rem 4rem rgba($black, 0.4);
+  transition: all 150ms ease-in;
+
+  &__icon {
+    font-size: f.rem(70);
+    grid-row: 1/2;
+    -webkit-background-clip: text;
+    display: inline-block;
+    color: transparent;
+    background-image: linear-gradient(to right, $light-color, $dark-color);
+  }
+
+  &__title {
+    grid-row: 2;
+    font-size: f.rem(20);
+    text-transform: uppercase;
+  }
+  &__paragraph {
+    font-size: f.rem(16);
+    grid-row: 3/4;
+    padding: f.rem(5);
+    overflow: scroll;
+  }
+
+  &:hover {
+    transform: translateY(-25px) scale(1.03);
+    box-shadow: 0 2rem 4rem rgba($black, 0.6);
+  }
+}
