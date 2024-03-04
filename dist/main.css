@@ -248,6 +248,9 @@ li {
 }
 .card__side--retro {
   transform: rotateY(180deg);
+  display: grid;
+  place-content: center;
+  text-align: center;
 }
 .card__side--retro-1 {
   background: linear-gradient(-45deg, rgb(40, 180, 133), rgb(126, 213, 111));
@@ -274,6 +277,30 @@ li {
 }
 .card__list--item:last-child {
   border-bottom: none;
+}
+.card__paragraph-retro {
+  font-size: 0.9375rem;
+  font-weight: 400;
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+}
+.card__price-retro {
+  font-size: 4.375rem;
+  color: rgb(255, 255, 255);
+  font-weight: 200;
+  text-transform: uppercase;
+}
+.card__cta-retro {
+  margin-top: 4.375rem;
+  animation: none !important;
+  width: 100% !important;
+}
+
+.width-btn {
+  width: 25% !important;
+  font-size: 1rem !important;
+  background-color: rgb(40, 180, 133) !important;
+  color: rgb(255, 255, 255) !important;
 }
 
 .btn {

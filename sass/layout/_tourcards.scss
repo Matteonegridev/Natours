@@ -110,6 +110,13 @@ $tertiary-dark: rgb(86, 67, 250);
 
     &--retro {
       transform: rotateY(180deg);
+      display: grid;
+      place-content: center;
+      text-align: center;
+
+      // & > * {
+      //   margin-block: f.rem(20);
+      // }
 
       &-1 {
         background: linear-gradient(-45deg, $dark-color, $light-color);
@@ -120,6 +127,8 @@ $tertiary-dark: rgb(86, 67, 250);
       &-3 {
         background: linear-gradient(-45deg, $tertiary-dark, $tertiary-light);
       }
+    }
+    &--retro-1 {
     }
   }
 
@@ -141,4 +150,27 @@ $tertiary-dark: rgb(86, 67, 250);
       }
     }
   }
+  &__paragraph-retro {
+    font-size: f.rem(15);
+    font-weight: 400;
+    color: $white;
+    text-transform: uppercase;
+  }
+  &__price-retro {
+    font-size: f.rem(70);
+    color: $white;
+    font-weight: 200;
+    text-transform: uppercase;
+  }
+  &__cta-retro {
+    margin-top: f.rem(70);
+    animation: none !important;
+    width: 100% !important;
+  }
+}
+.width-btn {
+  width: 25% !important;
+  font-size: f.rem(16) !important;
+  background-color: $dark-color !important;
+  color: $white !important;
 }
