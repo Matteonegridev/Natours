@@ -171,8 +171,7 @@ li {
 }
 .feature-box__paragraph {
   font-size: 1rem;
-  padding: 0.3125rem;
-  overflow: scroll;
+  padding: 0.5rem 1rem;
 }
 .feature-box:hover {
   transform: translateY(-25px) scale(1.03);

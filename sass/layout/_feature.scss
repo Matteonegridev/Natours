@@ -51,8 +51,8 @@ $gb-color-gray: rgb(247, 247, 247);
   }
   &__paragraph {
     font-size: f.rem(16);
-    padding: f.rem(5);
-    overflow: scroll;
+    padding: f.rem(8) f.rem(16);
+    // overflow: scroll;
   }
 
   &:hover {
