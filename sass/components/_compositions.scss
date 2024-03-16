@@ -1,13 +1,5 @@
 @use "../utilities/functions" as f;
-
-$alpha: 0.8;
-$light-color: rgb(126, 213, 111);
-$med-color: rgb(85, 197, 122);
-$dark-color: rgb(40, 180, 133);
-$text-color: rgb(119, 119, 119);
-$white: rgb(255, 255, 255);
-$black: rgb(53, 53, 53);
-$gb-color-gray: rgb(247, 247, 247);
+@use "../components/colors" as *;
 
 .composition {
   position: relative;

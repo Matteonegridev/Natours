@@ -1,0 +1,23 @@
+@use "../components/colors" as *;
+@use "../utilities/functions" as f;
+
+.section-stories {
+  background: $gb-color-gray;
+  padding: f.rem(150) 0;
+}
+.story {
+  width: 75%;
+  background-color: $white;
+  margin: 0 auto;
+  box-shadow: 0 3rem 6rem rgba($black, 0.1);
+  border-radius: f.rem(3);
+  font-size: f.rem(16);
+  padding: f.rem(60);
+
+  &__shape {
+    width: f.rem(150);
+    height: f.rem(150);
+    background: red;
+    float: left;
+  }
+}

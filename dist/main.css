@@ -302,6 +302,27 @@ li {
   color: rgb(255, 255, 255) !important;
 }
 
+.section-stories {
+  background: rgb(247, 247, 247);
+  padding: 9.375rem 0;
+}
+
+.story {
+  width: 75%;
+  background-color: rgb(255, 255, 255);
+  margin: 0 auto;
+  box-shadow: 0 3rem 6rem rgba(53, 53, 53, 0.1);
+  border-radius: 0.1875rem;
+  font-size: 1rem;
+  padding: 3.75rem;
+}
+.story__shape {
+  width: 9.375rem;
+  height: 9.375rem;
+  background: red;
+  float: left;
+}
+
 .btn {
   /* per centrarlo abbiamo dato al container il text align center*/
   display: inline-block;

@@ -1,17 +1,5 @@
 @use "../utilities/functions" as f;
-
-$alpha: 0.8;
-$light-color: rgb(126, 213, 111);
-$med-color: rgb(85, 197, 122);
-$dark-color: rgb(40, 180, 133);
-$text-color: rgb(119, 119, 119);
-$white: rgb(255, 255, 255);
-$black: rgb(53, 53, 53);
-$gb-color-gray: rgb(247, 247, 247);
-$secondary-light: rgb(255, 185, 0);
-$secondary-dark: rgb(255, 119, 56);
-$tertiary-light: rgb(41, 152, 255);
-$tertiary-dark: rgb(86, 67, 250);
+@use "../components/colors" as *;
 
 .tour-section {
   padding: f.rem(250) f.rem(50);
