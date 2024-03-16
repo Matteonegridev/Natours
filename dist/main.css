@@ -303,17 +303,18 @@ li {
 }
 
 .section-stories {
-  background: rgb(247, 247, 247);
   padding: 9.375rem 0;
+  position: relative;
 }
 
 .story {
   width: 75%;
-  background: rgba(255, 255, 255, 0.78);
+  background: rgba(255, 255, 255, 0.49);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(7.9px);
-  -webkit-backdrop-filter: blur(7.9px);
+  backdrop-filter: blur(2.2px);
+  -webkit-backdrop-filter: blur(2.2px);
+  border: 1px solid rgba(255, 255, 255, 0.35);
   margin: 0 auto;
   box-shadow: 0 3rem 6rem rgba(53, 53, 53, 0.1);
   border-radius: 0.1875rem;
@@ -370,6 +371,17 @@ li {
 
 .m-top {
   margin-top: 1.875rem;
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+  opacity: 0.2;
 }
 
 .btn {
