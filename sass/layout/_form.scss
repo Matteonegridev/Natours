@@ -90,12 +90,18 @@
       display: block;
       margin-left: f.rem(32);
       margin-top: f.rem(5);
-      transition: all 0.3s;
+      transform: translateY(3px);
+      transition: all 0.25s;
     }
+    // tradotto: quando l'input è cliccato, il placeholder
+    // è mostrato, il label ha opacity 0 per l'effetto ed una
+    // visibility hidden. Quando si scrive, il placeholder scompare
+    // di default ma il label transla verso il basso (osserva anche
+    // il translateY del --label)
     &--input:placeholder-shown + &--label {
       opacity: 0;
       visibility: hidden;
-      transform: translateY(5);
+      transform: translateY(-38px);
     }
   }
 }
