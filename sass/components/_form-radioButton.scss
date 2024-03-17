@@ -1,0 +1,63 @@
+@use "../utilities/functions" as f;
+@use "../components/colors" as *;
+
+#small-group,
+#large-group {
+  // rimuove il check blu all'interno
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  font-family: inherit;
+  color: $dark-color;
+  width: f.rem(25);
+  height: f.rem(25);
+  border: 1px solid $dark-color;
+  border-radius: 50%;
+  margin-left: f.rem(20);
+  transform: translateY(5px);
+}
+.radio-label {
+  margin-left: f.rem(8);
+  font-size: f.rem(18);
+  cursor: pointer;
+}
+#small-group::before,
+#large-group::before {
+  position: absolute;
+  content: "";
+  width: f.rem(20);
+  height: f.rem(20);
+  transition: 120ms transform ease-in-out;
+  top: 1.5px;
+  left: 1.5px;
+  border-radius: 50%;
+  transition: all 350ms ease-in-out;
+  display: block;
+}
+#small-group:checked::before,
+#large-group:checked::before {
+  background-color: $dark-color;
+}
+input[type="radio"]:focus {
+  outline: 4px solid currentColor;
+  outline-offset: max(2px, 0.15em);
+  transition: all 350ms ease-in-out;
+}
+.btn-form {
+  animation: none !important;
+  outline: none !important;
+  border: none !important;
+  width: 40% !important;
+  cursor: pointer !important;
+  position: relative !important;
+  font-size: f.rem(16) !important;
+  margin-top: f.rem(10) !important;
+
+  &:hover {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  }
+}
+.a-form {
+  position: absolute;
+  top: f.rem(14);
+}
