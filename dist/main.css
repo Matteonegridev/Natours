@@ -425,7 +425,7 @@ li {
   width: 80%;
 }
 .form__group--input::-webkit-input-placeholder {
-  color: rgb(46, 47, 46);
+  color: rgb(119, 119, 119);
   font-family: inherit;
 }
 .form__group--input:focus {
@@ -449,6 +449,45 @@ li {
   opacity: 0;
   visibility: hidden;
   transform: translateY(-38px);
+}
+
+.footer {
+  background-color: rgb(51, 51, 51);
+  padding: 9.375rem 0;
+  font-size: 1rem;
+}
+.footer__logo-box {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+.footer__logo {
+  height: auto;
+  width: 9.375rem;
+}
+.footer__navigation {
+  border-top: 1px solid rgb(153, 153, 153);
+  display: inline-block;
+}
+.footer__list {
+  margin-top: 0.625rem;
+}
+.footer__list--item {
+  display: inline-block;
+}
+.footer__list--item:not(:last-child) {
+  margin-right: 1rem;
+}
+.footer__list--link {
+  color: rgb(153, 153, 153);
+  text-transform: uppercase;
+  display: inline-block;
+}
+.footer__list--link:hover {
+  color: rgb(40, 180, 133);
+}
+.footer__copyright {
+  float: right;
+  font-size: 1rem;
 }
 
 .btn {
