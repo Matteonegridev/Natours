@@ -607,6 +607,50 @@ li {
         transform: scaleX(1.5) scaleY(1.6);
         opacity: 0;
       } */
+.popup {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: rgba(53, 53, 53, 0.9);
+  opacity: 0;
+  visibility: hidden;
+}
+.popup__content {
+  width: 75%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(255, 255, 255);
+  display: grid;
+  grid-template-columns: 33.33333% 66.666667%;
+  overflow: hidden;
+  box-shadow: 0 2rem 4rem rgba(53, 53, 53, 0.2);
+}
+.popup__left--image {
+  display: block;
+  width: 100%;
+}
+.popup__right {
+  display: grid;
+  align-items: center;
+  padding: 3.125rem;
+}
+.popup__paragraph {
+  margin-top: 1rem;
+  column-count: 2;
+  column-gap: 1.25rem;
+  hyphens: auto;
+}
+
+.x {
+  width: 13.125rem !important;
+  text-align: center !important;
+}
+
 .composition {
   position: relative;
 }
@@ -745,7 +789,7 @@ li {
   top: 1.5px;
   left: 1.5px;
   border-radius: 50%;
-  transition: all 350ms ease-in-out;
+  transition: all 150ms ease-in-out;
   display: block;
 }
 
@@ -757,7 +801,7 @@ li {
 input[type=radio]:focus {
   outline: 4px solid currentColor;
   outline-offset: max(2px, 0.15em);
-  transition: all 350ms ease-in-out;
+  transition: all 150ms ease-in-out;
 }
 
 .btn-form {

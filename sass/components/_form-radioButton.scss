@@ -31,7 +31,7 @@
   top: 1.5px;
   left: 1.5px;
   border-radius: 50%;
-  transition: all 350ms ease-in-out;
+  transition: all 150ms ease-in-out;
   display: block;
 }
 #small-group:checked::before,
@@ -41,7 +41,7 @@
 input[type="radio"]:focus {
   outline: 4px solid currentColor;
   outline-offset: max(2px, 0.15em);
-  transition: all 350ms ease-in-out;
+  transition: all 150ms ease-in-out;
 }
 .btn-form {
   animation: none !important;

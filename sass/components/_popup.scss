@@ -1,0 +1,51 @@
+@use "../utilities/functions" as f;
+@use "../components/colors" as *;
+@use "../utilities/mixins" as *;
+
+.popup {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: rgba($black, 0.9);
+  opacity: 0;
+  visibility: hidden;
+
+  &__content {
+    width: 75%;
+    @include absCenter;
+    background-color: $white;
+
+    display: grid;
+    grid-template-columns: 33.33333% 66.666667%;
+    overflow: hidden;
+    box-shadow: 0 2rem 4rem rgba($black, 0.2);
+  }
+
+  &__left {
+    &--image {
+      display: block;
+      width: 100%;
+    }
+  }
+  &__right {
+    display: grid;
+    align-items: center;
+    padding: f.rem(50);
+  }
+  &__paragraph {
+    margin-top: f.rem(16);
+    //crea colonne per il testo
+    column-count: 2;
+    column-gap: f.rem(20);
+    //hyphens è collegato a "lang" nell' HTML, ovvero la lingua utilizaata
+
+    hyphens: auto;
+  }
+}
+.x {
+  width: f.rem(210) !important;
+  text-align: center !important;
+}
