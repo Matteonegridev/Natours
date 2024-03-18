@@ -500,17 +500,24 @@ li {
 }
 
 .navigation__nav {
-  width: 100%;
   position: fixed;
-  z-index: 999;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  z-index: 998;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  opacity: 0;
+  width: 0;
+  transition: all 0.8s cubic-bezier(0.83, 0, 0.17, 1);
 }
 .navigation__list {
   text-transform: uppercase;
   font-size: 1.5625rem;
   text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  width: 100%;
 }
 .navigation__list--item {
   margin-block: 1.25rem;
@@ -639,15 +646,15 @@ li {
   display: none;
 }
 .burger-menu__background {
-  background: radial-gradient(rgb(126, 213, 111), rgb(40, 180, 133));
-  height: 6rem;
-  width: 6rem;
+  background: radial-gradient(rgb(85, 197, 122), rgb(40, 180, 133));
+  width: 3.75rem;
+  height: 3.75rem;
   border-radius: 50%;
-  top: 0.625rem;
-  right: 0.625rem;
+  right: 3.4375rem;
+  top: 2.5rem;
   position: fixed;
   z-index: 998;
-  transform: scale(50);
+  transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
 }
 .burger-menu__lines {
   width: 1.5625rem;
@@ -655,9 +662,10 @@ li {
   background-color: rgb(53, 53, 53);
   float: right;
   position: relative;
-  top: 0.1875rem;
-  right: 0;
+  top: 1.8125rem;
+  right: 1.125rem;
   z-index: 999;
+  transition: all 250ms ease;
 }
 .burger-menu__lines::before, .burger-menu__lines::after {
   content: "";
@@ -666,6 +674,7 @@ li {
   height: 0.125rem;
   background-color: rgb(53, 53, 53);
   float: right;
+  transition: all 250ms ease;
 }
 .burger-menu__lines::after {
   top: 0.5rem;
@@ -675,13 +684,34 @@ li {
 }
 .burger-menu__btn {
   float: right;
-  padding: 1.125rem 0.4375rem;
-  position: relative;
-  background-color: red;
+  box-shadow: 0 0.5rem 1rem rgba(53, 53, 53, 0.2);
+  position: fixed;
+  background-color: rgb(255, 255, 255);
+  width: 3.75rem;
+  height: 3.75rem;
+  border-radius: 50%;
   cursor: pointer;
-  right: 0.9375rem;
-  top: 0.9375rem;
+  right: 3.4375rem;
+  top: 2.5rem;
   z-index: 999;
+}
+.burger-menu:checked ~ .burger-menu__btn .burger-menu__lines {
+  background: transparent;
+}
+.burger-menu:checked ~ .burger-menu__btn .burger-menu__lines::after {
+  top: 0;
+  transform: rotate(45deg);
+}
+.burger-menu:checked ~ .burger-menu__btn .burger-menu__lines::before {
+  top: 0;
+  transform: rotate(-45deg);
+}
+.burger-menu:checked ~ .burger-menu__background {
+  transform: scale(80);
+}
+.burger-menu:checked ~ .navigation__nav {
+  opacity: 1;
+  width: 100%;
 }
 
 #small-group,
