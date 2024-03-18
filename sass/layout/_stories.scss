@@ -22,12 +22,14 @@
   transform: skewX(-10deg);
 
   &__shape {
+    //shape foto
     width: f.rem(170);
     height: f.rem(170);
     float: left;
     clip-path: circle(50% at 50% 50%);
     //il testo viene disposto a cerchio
     shape-outside: circle(50% at 50% 50%);
+    //skew back perche il container ha skew
     transform: translateX(-2rem) skewX(10deg);
     position: relative;
 
