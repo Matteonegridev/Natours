@@ -1,0 +1,56 @@
+@use "../utilities/functions" as f;
+@use "../components/colors" as *;
+
+.burger-menu {
+  display: none;
+
+  &__background {
+    background: radial-gradient($light-color, $dark-color);
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    top: f.rem(10);
+    right: f.rem(10);
+    position: fixed;
+    z-index: 998;
+    transform: scale(50);
+  }
+
+  &__lines {
+    width: f.rem(25);
+    height: f.rem(2);
+    background-color: $black;
+    float: right;
+    position: relative;
+    top: f.rem(3);
+    right: 0;
+    z-index: 999;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: f.rem(25);
+      height: f.rem(2);
+      background-color: $black;
+      float: right;
+    }
+    &::after {
+      top: f.rem(8);
+    }
+    &::before {
+      top: f.rem(-8);
+    }
+  }
+
+  &__btn {
+    float: right;
+    padding: f.rem(18) f.rem(7);
+    position: relative;
+    background-color: red;
+    cursor: pointer;
+    right: f.rem(15);
+    top: f.rem(15);
+    z-index: 999;
+  }
+}

@@ -455,6 +455,7 @@ li {
   background-color: rgb(51, 51, 51);
   padding: 9.375rem 0;
   font-size: 1rem;
+  position: relative;
 }
 .footer__logo-box {
   text-align: center;
@@ -486,8 +487,44 @@ li {
   color: rgb(40, 180, 133);
 }
 .footer__copyright {
-  float: right;
-  font-size: 1rem;
+  position: absolute;
+  bottom: 1.875rem;
+  right: 1.25rem;
+  font-size: 0.875rem;
+}
+.footer__disclaimer {
+  position: absolute;
+  bottom: 0.625rem;
+  right: 1.25rem;
+  font-size: 0.625rem;
+}
+
+.navigation__nav {
+  width: 100%;
+  position: fixed;
+  z-index: 999;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.navigation__list {
+  text-transform: uppercase;
+  font-size: 1.5625rem;
+  text-align: center;
+}
+.navigation__list--item {
+  margin-block: 1.25rem;
+}
+.navigation__list--link:link, .navigation__list--link:visited {
+  color: rgb(255, 255, 255);
+  padding: 0.75rem 2.1875rem;
+  background-image: linear-gradient(120deg, transparent 0%, transparent 50%, rgb(255, 255, 255) 50%);
+  background-size: 220%;
+  transition: all 350ms ease-in-out;
+}
+.navigation__list--link:hover, .navigation__list--link:active {
+  background-position: 100%;
+  color: rgb(40, 180, 133);
 }
 
 .btn {
@@ -596,6 +633,55 @@ li {
 }
 .composition:hover .composition__photo:not(:hover) {
   transform: scale(0.9);
+}
+
+.burger-menu {
+  display: none;
+}
+.burger-menu__background {
+  background: radial-gradient(rgb(126, 213, 111), rgb(40, 180, 133));
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+  top: 0.625rem;
+  right: 0.625rem;
+  position: fixed;
+  z-index: 998;
+  transform: scale(50);
+}
+.burger-menu__lines {
+  width: 1.5625rem;
+  height: 0.125rem;
+  background-color: rgb(53, 53, 53);
+  float: right;
+  position: relative;
+  top: 0.1875rem;
+  right: 0;
+  z-index: 999;
+}
+.burger-menu__lines::before, .burger-menu__lines::after {
+  content: "";
+  position: absolute;
+  width: 1.5625rem;
+  height: 0.125rem;
+  background-color: rgb(53, 53, 53);
+  float: right;
+}
+.burger-menu__lines::after {
+  top: 0.5rem;
+}
+.burger-menu__lines::before {
+  top: -0.5rem;
+}
+.burger-menu__btn {
+  float: right;
+  padding: 1.125rem 0.4375rem;
+  position: relative;
+  background-color: red;
+  cursor: pointer;
+  right: 0.9375rem;
+  top: 0.9375rem;
+  z-index: 999;
 }
 
 #small-group,
