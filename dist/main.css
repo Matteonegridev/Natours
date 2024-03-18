@@ -615,8 +615,6 @@ li {
   left: 0;
   z-index: 1000;
   background-color: rgba(53, 53, 53, 0.9);
-  opacity: 0;
-  visibility: hidden;
 }
 .popup__content {
   width: 75%;
@@ -649,6 +647,22 @@ li {
 .x {
   width: 13.125rem !important;
   text-align: center !important;
+}
+
+.close-modal {
+  position: absolute;
+  top: 0.625rem;
+  right: 1.5rem;
+  font-size: 2.25rem;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
 }
 
 .composition {

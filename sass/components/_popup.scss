@@ -10,8 +10,6 @@
   left: 0;
   z-index: 1000;
   background-color: rgba($black, 0.9);
-  opacity: 0;
-  visibility: hidden;
 
   &__content {
     width: 75%;
@@ -48,4 +46,18 @@
 .x {
   width: f.rem(210) !important;
   text-align: center !important;
+}
+.close-modal {
+  position: absolute;
+  top: f.rem(10);
+  right: f.rem(24);
+  font-size: f.rem(36);
+  color: #333;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+.hidden {
+  opacity: 0;
+  visibility: hidden;
 }

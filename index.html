@@ -191,7 +191,10 @@
               <div class="card__side card__side--retro card__side--retro-1">
                 <p class="card__paragraph-retro">only</p>
                 <h3 class="card__price-retro">$297</h3>
-                <a href="#popup" class="btn btn--white card__cta-retro"
+                <a
+                  href="#popup"
+                  id="show-modal"
+                  class="btn btn--white card__cta-retro"
                   >book now!<span class="arrow"></span
                 ></a>
               </div>
@@ -217,7 +220,10 @@
               <div class="card__side card__side--retro card__side--retro-2">
                 <p class="card__paragraph-retro">only</p>
                 <h3 class="card__price-retro">$497</h3>
-                <a href="#popup" class="btn btn--white card__cta-retro"
+                <a
+                  href="#popup"
+                  id="show-modal"
+                  class="btn btn--white card__cta-retro"
                   >book now!<span class="arrow"></span
                 ></a>
               </div>
@@ -244,7 +250,10 @@
               <div class="card__side card__side--retro card__side--retro-3">
                 <p class="card__paragraph-retro">Only</p>
                 <h3 class="card__price-retro">$897</h3>
-                <a href="#popup" class="btn btn--white card__cta-retro"
+                <a
+                  href="#popup"
+                  id="show-modal"
+                  class="btn btn--white card__cta-retro"
                   >book now!<span class="arrow"></span
                 ></a>
               </div>
@@ -423,8 +432,9 @@
         </div>
       </div>
     </footer>
-    <div class="popup" id="popup">
-      <div class="popup__content">
+    <div class="popup hidden overlay" id="popup">
+      <div class="popup__content hidden modal">
+        <button class="close-modal">&times;</button>
         <div class="popup__left">
           <img
             src="assets/img/nat-8.jpg"
@@ -459,5 +469,6 @@
         </div>
       </div>
     </div>
+    <script src="app.js"></script>
   </body>
 </html>
