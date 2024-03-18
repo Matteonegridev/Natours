@@ -1,0 +1,44 @@
+@use "../utilities/functions" as f;
+@use "../components/colors" as *;
+
+.navigation {
+  &__nav {
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &__list {
+    text-transform: uppercase;
+    font-size: f.rem(25);
+    text-align: center;
+
+    &--item {
+      margin-block: f.rem(20);
+    }
+
+    &--link {
+      &:link,
+      &:visited {
+        color: $white;
+        padding: f.rem(12) f.rem(35);
+        background-image: linear-gradient(
+          120deg,
+          transparent 0%,
+          transparent 50%,
+          $white 50%
+        );
+        background-size: 220%;
+        transition: all 350ms ease-in-out;
+      }
+
+      &:hover,
+      &:active {
+        background-position: 100%;
+        color: $dark-color;
+      }
+    }
+  }
+}
