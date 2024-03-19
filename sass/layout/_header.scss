@@ -7,7 +7,7 @@
       rgba($dark-color, $alpha),
       rgba($med-color, $alpha)
     ),
-    url(../assets/img/hero.jpg) top;
+    url(/assets/img/hero.jpg) top;
   background-size: cover;
   position: relative;
   clip-path: polygon(0 0, 100% 0%, 100% 82%, 0 100%);
