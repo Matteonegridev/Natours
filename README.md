@@ -33,8 +33,8 @@ background-image: linear-gradient(to right, $light-color, $dark-color);
 }
 ```
 
-    1. Perspective makes sure che rotation doesn't take the whole screen as effect.
-    2. height important to make the cards basically appear
+1. Perspective makes sure che rotation doesn't take the whole screen as effect.
+2. height important to make the cards basically appear
 
 - ```
   &__heading-span {
@@ -53,7 +53,7 @@ background-image: linear-gradient(to right, $light-color, $dark-color);
     }
   ```
 
-  1. **Box decoration break** modify the background , "aligning" it
+1. **Box decoration break** modify the background , "aligning" it
 
 - This is quite important:
 
