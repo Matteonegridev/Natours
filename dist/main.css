@@ -717,17 +717,71 @@ li {
   transition: all 250ms ease-in-out;
   outline-offset: 0.625rem;
 }
+@media (max-width: 37.5em) {
+  .composition__photo {
+    z-index: 1;
+  }
+}
+@media (max-width: 600px) {
+  .composition__photo {
+    z-index: 1;
+  }
+}
 .composition__photo--p1 {
   left: 0;
   top: -0.125rem;
+}
+@media (max-width: 37.5em) {
+  .composition__photo--p1 {
+    left: 0.625rem;
+  }
+}
+@media (max-width: 600px) {
+  .composition__photo--p1 {
+    left: 0.625rem;
+  }
 }
 .composition__photo--p2 {
   right: 0rem;
   top: 1.25rem;
 }
+@media (max-width: 37.5em) {
+  .composition__photo--p2 {
+    right: 0.625rem;
+  }
+}
+@media (max-width: 600px) {
+  .composition__photo--p2 {
+    right: 0.625rem;
+  }
+}
 .composition__photo--p3 {
   top: 9.375rem;
   left: 6.25rem;
+}
+@media (max-width: 75em) {
+  .composition__photo--p3 {
+    top: 6.25rem;
+    left: 5rem;
+  }
+}
+@media (max-width: 56.25em) {
+  .composition__photo--p3 {
+    top: 6.25rem;
+    left: 4.375rem;
+  }
+}
+@media (max-width: 37.5em) {
+  .composition__photo--p3 {
+    top: 5.9375rem;
+    left: 3.75rem;
+  }
+}
+@media (max-width: 600px) {
+  .composition__photo--p3 {
+    top: 5.9375rem;
+    left: 3.75rem;
+  }
 }
 .composition__photo:hover {
   transform: scale(1.06) translateY(-10px);

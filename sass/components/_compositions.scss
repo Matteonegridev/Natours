@@ -1,5 +1,6 @@
 @use "../utilities/functions" as f;
 @use "../components/colors" as *;
+@use "../utilities/mixins" as *;
 
 .composition {
   position: relative;
@@ -13,18 +14,43 @@
     transition: all 250ms ease-in-out;
     outline-offset: f.rem(10);
 
+    @include media(phone) {
+      z-index: 1;
+    }
+
     &--p1 {
       left: 0;
       top: f.rem(-2);
+
+      @include media(phone) {
+        left: f.rem(10);
+      }
     }
 
     &--p2 {
       right: f.rem(0);
       top: f.rem(20);
+
+      @include media(phone) {
+        right: f.rem(10);
+      }
     }
     &--p3 {
       top: f.rem(150);
       left: f.rem(100);
+
+      @include media(tablet-land) {
+        top: f.rem(100);
+        left: f.rem(80);
+      }
+      @include media(tablet-potrait) {
+        top: f.rem(100);
+        left: f.rem(70);
+      }
+      @include media(phone) {
+        top: f.rem(95);
+        left: f.rem(60);
+      }
     }
     &:hover {
       transform: scale(1.06) translateY(-10px);
