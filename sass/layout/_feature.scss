@@ -1,5 +1,6 @@
 @use "../utilities/functions" as f;
 @use "../components/colors" as *;
+@use "../utilities/mixins" as *;
 
 .section-features {
   padding: f.rem(150) 0;
@@ -29,6 +30,11 @@
   box-shadow: 0 1.5rem 4rem rgba($black, 0.4);
   transition: all 150ms ease-in;
 
+  @include media(phone) {
+    margin: 0 auto;
+    width: 90%;
+  }
+
   &__icon {
     font-size: f.rem(70);
     -webkit-background-clip: text;
@@ -49,5 +55,10 @@
   &:hover {
     transform: translateY(-25px) scale(1.03);
     box-shadow: 0 2rem 4rem rgba($black, 0.6);
+  }
+}
+@include media(tablet-potrait) {
+  .features-row {
+    padding-inline: f.rem(16);
   }
 }

@@ -28,7 +28,7 @@
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   $gap: f.rem(50);
   gap: $gap;
-  padding: 0 f.rem(80);
+  // padding: 0 f.rem(80);
 }
 .heading--tertiary {
   font-size: f.rem(19);

@@ -1,5 +1,6 @@
 @use "../utilities/functions" as f;
 @use "../components/colors" as *;
+@use "../utilities/mixins" as *;
 
 .navigation {
   &__nav {
@@ -9,8 +10,7 @@
     right: 0;
     height: 100vh;
     opacity: 0;
-    //The width: 0; property in your CSS code is used to initially hide the
-    //navigation bar (&__nav) from the view.
+    //The width: 0; property in your CSS code is used to initially hide the navigation bar (&__nav) from the view.
     //When the width property is set to 0, it means the element
     //will not occupy any horizontal space on the screen.
     //This is often used in conjunction with other properties to create

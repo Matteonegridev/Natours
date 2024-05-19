@@ -1,5 +1,6 @@
 @use "../utilities/functions" as f;
 @use "../components/colors" as *;
+@use "../utilities/mixins" as *;
 
 .tour-section {
   padding: f.rem(250) f.rem(50);

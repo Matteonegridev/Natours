@@ -1,5 +1,6 @@
 @use "../utilities/functions" as f;
 @use "../components/colors" as *;
+@use "../utilities/mixins" as *;
 
 .burger-menu {
   display: none;

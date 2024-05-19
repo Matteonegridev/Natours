@@ -1,5 +1,6 @@
 @use "../utilities/functions" as f;
 @use "../components/colors" as *;
+@use "../utilities/mixins" as *;
 
 *,
 *::after,
@@ -17,6 +18,10 @@ body {
   padding: f.rem(29);
   color: $text-color;
   text-rendering: optimizeSpeed;
+
+  @include media(phone) {
+    padding: 0;
+  }
 }
 a {
   text-decoration: none;

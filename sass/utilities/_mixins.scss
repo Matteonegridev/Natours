@@ -4,3 +4,36 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+// em units are the best for media quaries
+@mixin media($device) {
+  @if ($device == "phone") {
+    @media (max-width: 37.5em) {
+      //600px
+      @content;
+    }
+  }
+  @if ($device == "tablet-potrait") {
+    @media (max-width: 56.25em) {
+      //900px
+      @content;
+    }
+  }
+  @if ($device == "tablet-land") {
+    @media (max-width: 75em) {
+      //1200px
+      @content;
+    }
+  }
+  @if ($device == "big-desktop") {
+    @media (min-width: 112em) {
+      // 1800px
+      @content;
+    }
+  }
+  @if ($device == "phone") {
+    @media (max-width: 600px) {
+      @content;
+    }
+  }
+}
