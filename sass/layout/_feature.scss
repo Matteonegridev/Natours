@@ -21,6 +21,9 @@
     transform: skewY(7deg);
   }
 }
+.features-row {
+  padding: f.rem(16);
+}
 .feature-box {
   background-color: rgba($white, $alpha);
   padding: f.rem(25);

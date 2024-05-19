@@ -168,6 +168,10 @@ li {
   transform: skewY(7deg);
 }
 
+.features-row {
+  padding: 1rem;
+}
+
 .feature-box {
   background-color: rgba(255, 255, 255, 0.8);
   padding: 1.5625rem;
